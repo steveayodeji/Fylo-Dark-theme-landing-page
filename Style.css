@@ -1,0 +1,430 @@
+/* Desktop */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+:root{ 
+    --intro-email-bg:  hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --foot-bg:hsl(216, 53%, 9%);
+    --testimonials-bg:  hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --White: hsl(0, 0%, 100%);
+
+}
+html{
+    font-family: "open Sans;", sans-serif;
+    font-weight: 400;
+    font-size:14px ;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    background: var(--main-bg);
+    color:var(--White);}
+
+h2,
+h3,
+nav,
+.button{
+ font-family: "Raleway" , sans-serif  ;
+ font-weight: 700; 
+}
+ul,
+li{
+    list-style: none;
+}
+a{
+    color:var(--white);
+    text-decoration: none;
+}
+h2{
+    font-size: 40px;
+}
+
+main {
+    position: relative;
+    padding-bottom:200px;
+
+}
+
+.topnav{
+    width: 100%;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 73px;
+     padding-bottom: 73px;
+    background-color: var(--intro-email-bg);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+    }
+    .menu :not(:last-child){
+        padding-right: 56px;
+    }
+.logo{
+    padding-left: 80px;
+}
+
+.main-page{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--intro-email-bg) url("images/bg-curvy-desktop.svg") bottom no-repeat;
+    background-size: 100% 270px;
+    text-align: center;
+}
+.main-page img{
+    width:739;
+    height: 533;
+}
+
+.main-page h2{
+    width:742px;
+    margin:46px;
+}
+
+.main-page p{
+    width:650px;
+    font-size : 22px;
+    padding: 0 30px;
+}
+
+.button{
+    width:250px;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin: 30px 0;
+    background: linear-gradient(to right, var(--cyan), var(--blue));
+    border:none;
+}
+
+.elements {
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 94px 150px;
+    margin:130px 0;
+    padding: 0 80px;
+}
+
+.element {
+    text-align: center;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.box img{
+    height: 460px;
+    width: auto;
+    margin-right: 45px;
+}
+
+.box1 :not(:last-child){margin-bottom: 25px;} 
+
+.arrow{ color:var(--cyan);
+    border-bottom: 1px solid;
+
+}
+
+.arrow img{
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.test{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+    padding: 40px;
+}
+.tes{background:var(--testimonials-bg);
+    padding: 45px 45px;
+    border-radius: 5px;
+    position: relative;
+}
+.tes:first-child::before{
+    content: url(images/bg-quotes.png);
+    position: absolute;
+    top: -35px;
+    left: -15px;
+    z-index:-1;
+}
+
+.tes p {
+    margin-bottom: 25px;
+    }
+
+.author{
+    display:flex;
+} 
+.author img{
+    width: 27px;
+    height:27px;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.client h3{
+font-size: 10px;
+}
+
+.client p{
+    font-size: 8px;
+    }
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--intro-email-bg);
+    padding: 50px 74px 40px 74px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -155px;
+    height: 150px;
+    width: 650px;
+    margin-bottom: 50px;
+}
+
+.sign-up p{
+    margin-top: -20px;
+    text-align: center;
+}
+.sign-up form{
+    margin-top: -30px;
+}
+
+input[type="email"]{
+    width: 250px;
+    height:0px ;
+    padding: 20px 47px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    margin-right: 15px;
+    }
+input[type="submit"]{
+    color: var(--white);
+}
+::placeholder {
+    opacity: 0.4;
+}
+
+footer{
+    background: var(--foot-bg);
+    padding: 200px 80px 80px 0px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 70px;
+    grid-template-areas: 
+    "logo . . . ."
+    "location contact links links-2 social"
+    ;
+    }
+ .logo{
+     grid-area: logo;
+     margin-bottom: 35px;
+ }
+
+ .location{
+    grid-area: location;
+    display:grid;
+    grid-template-columns: 5% 95%;
+    margin-top: 25px;
+    
+ }
+
+ .location span{
+     padding-left: 35px;
+ }
+
+ .contact{
+      grid-area: contact;
+      margin-top: 10px;
+ }
+
+ .contact p{
+     margin-bottom: 26px;
+ }
+ 
+.contact img{
+    margin-right: 24px;
+}
+
+.links{
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.links a{ margin-bottom: 24px;
+}
+
+.links-2{
+    grid-area:links-2; 
+    display: grid;
+    }
+.links-2 a{ margin-bottom:24px;
+}
+
+.social{
+    grid-area: social;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+}
+
+.social i{
+    font-size: 30px;
+}
+/* The media query is not working well... it affects the whole page regardless of screen size...
+@media (max-width:375px)
+{
+    html { font-size:10px;
+    }
+    h2{font-size:25px}   
+
+     .topnav{
+         padding: 24px 20px;
+     }   
+
+     .menu :not(:last-child){
+    padding-right: 23px;
+     }
+
+     .logos img{
+         width: 82px;
+         height: 24px;
+    }
+     .main-page{background: var(--intro-email-bg) url("images/bg-curvy-mobile.svg") center no-repeat;
+     background-size: 100% 130px;
+     position: relative;
+
+     }
+
+    .main-page::after{ content: "";
+        position: absolute;
+        background: var(--main-bg);
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+    bottom: 0px;
+    }   
+     .main-page img{ width: 302px;
+        height: 225px;
+    z-index: 2;}
+
+     }
+
+     .main-page h2{
+         width: 302px;
+         margin: 23px;
+         z-index: 2;
+     }
+
+     .main-page p{
+         width: 292px;
+
+         font-size: 12px;
+         padding: 0px 23px;
+         z-index: 2;
+     }
+
+     .button{
+         width: 242px;
+         padding: 10px 0 ;
+         z-index: 2;
+     }
+
+     .elements{ width: 80%;
+    grid-template-columns: 1fr;
+    gap: 74px 0px;
+    padding: 0px 38px;
+    margin: 100px 0px;
+
+     }
+
+     .main-page{background: var(--intro-email-bg) url("images/bg-curvy-mobile.svg") center no-repeat;
+    background-size: 100% 130px;}
+
+    
+     .middle{
+         flex-direction: column;
+         padding: 0 25px;
+    }
+
+    .box img{
+       height: 215px;
+       margin: 0px 0px 52px 0px; 
+    }
+
+    .test{
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 150px 22px;
+    }
+    .tes:first-child::before{
+        left:4px
+    }
+
+    .sign-up{
+        padding: 40px 25px;
+        bottom: -175px;
+      }
+      
+    form{
+        flex-direction: column;
+     }
+     input[type="email"],
+    input[type="submit"]
+    { width:280px;
+     margin:25px 0px 25px 25px;
+       
+    } 
+        footer{
+        grid-template-columns: 1fr;
+        padding: 280px 27px 42px 27px;
+        column-gap: 0;
+        row-gap: 20px;
+        grid-template-areas: "logo"
+        "location"
+        "contact"
+        "links"
+        "links-2"
+        "social" ;
+    }
+
+    .social i{
+        font-size: 28px ;
+    }
+
+    .fa-facebook{
+        justify-self: end;
+    }
+    .fa-twitter{
+        justify-self: center;
+    }
+    
+    .fa-instagram{
+        justify-self: start;
+    }
+}
+
+*/
