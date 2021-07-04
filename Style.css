@@ -6,7 +6,7 @@
 *::before{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 :root{ 
     --intro-email-bg:  hsl(217, 28%, 15%);
@@ -25,7 +25,9 @@ html{
     box-sizing:border-box;
     scroll-behavior:smooth;
     background: var(--main-bg);
-    color:var(--White);}
+    color:var(--White);
+    
+    }
 
 h2,
 h3,
@@ -111,7 +113,7 @@ main {
 }
 
 .elements {
-    width: 100%;
+    width: 85%;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 94px 150px;
@@ -294,11 +296,27 @@ footer{
 .social i{
     font-size: 30px;
 }
-/* The media query is not working well... it affects the whole page regardless of screen size...
-@media (max-width:375px)
+
+.attribution {
+    text-align: center;
+}
+
+.attribution a{
+    color: cyan;
+}
+
+.attribution a:active {
+    color: darkgoldenrod;
+}
+.attribution a:hover {
+    color: rebeccapurple;
+}
+
+ /*The media query is not working well... it affects the whole page regardless of screen size...*/
+@media only screen and ( max-width: 375px)
 {
     html { font-size:10px;
-    }
+            }
     h2{font-size:25px}   
 
      .topnav{
@@ -308,7 +326,7 @@ footer{
      .menu :not(:last-child){
     padding-right: 23px;
      }
-
+    
      .logos img{
          width: 82px;
          height: 24px;
@@ -331,9 +349,7 @@ footer{
         height: 225px;
     z-index: 2;}
 
-     }
-
-     .main-page h2{
+    .main-page h2{
          width: 302px;
          margin: 23px;
          z-index: 2;
@@ -383,21 +399,43 @@ footer{
     .tes:first-child::before{
         left:4px
     }
+/*
+    .sign-up{padding: 40px 25px;
+        bottom: -175px;
+        flex-direction: column;
+        width: 300px;
+        height: 150px;
+         }   
+    form{
+        padding-top: 50px;
+    } */
 
     .sign-up{
         padding: 40px 25px;
         bottom: -175px;
-      }
-      
+        width: 300px;
+        height: 150px;
+    }
+    .sign-up p{
+        padding-top: 15px;
+        font-size: 12px;
+    }
+    .sign-up h2{
+        margin-top: -20px;
+        }
+
     form{
         flex-direction: column;
-     }
-     input[type="email"],
-    input[type="submit"]
-    { width:280px;
-     margin:25px 0px 25px 25px;
-       
-    } 
+    }
+    input[type="email"]{width:200px;
+        margin:35px 25px 0px;}
+    input[type="submit"]{ text-align: center;
+        width:300px;
+        margin:20px 25px 0px;
+    }
+    
+
+             
         footer{
         grid-template-columns: 1fr;
         padding: 280px 27px 42px 27px;
@@ -427,4 +465,3 @@ footer{
     }
 }
 
-*/
